@@ -9,7 +9,7 @@ services:
       - COUCHDB_PASSWORD=${COUCHDB_PASSWORD} # enter the desired CouchDB admin password
     volumes:
       - ./data:/opt/couchdb/data
-      - ./local.ini:/opt/couchdb/etc/local.ini
+      - ./conf/local.ini:/opt/couchdb/etc/local.ini
     ports:
       - '5984'
     restart: unless-stopped
