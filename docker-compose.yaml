@@ -13,3 +13,5 @@ services:
     ports:
       - '5984'
     restart: unless-stopped
+    labels:
+      - 'caddy_0=https://obsidian-sync.milan.place'
