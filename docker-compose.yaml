@@ -11,5 +11,5 @@ services:
       - ./data:/opt/couchdb/data
       - ./local.ini:/opt/couchdb/etc/local.ini
     ports:
-      - 5984:5984
+      - '5984'
     restart: unless-stopped
