@@ -15,9 +15,11 @@ services:
     restart: unless-stopped
     labels:
       - 'caddy_0=https://obsidian-sync.milan.place'
-      - caddy.handle_path: /*
-      - caddy.handle_path.0_respond: "\"\" 403"
-      - caddy.handle_path.0_header.-Server: ""
-      - caddy.handle_path_1: /growth-kettle-deadline-describe-crowfoot/* 
-      - caddy.handle_path_1.0_reverse_proxy: "{{upstreams 5984}}"
+      #Block /
+      - 'caddy_0.handle_path=/*'
+      - 'caddy_0.handle_path.0_respond="\"\" 403"'
+      - 'caddy_0.handle_path.0_header.-Server=""'
+      #Secret (?) url haha
+      - 'caddy_0.handle_path_1=/growth-kettle-deadline-describe-crowfoot/*'
+      - 'caddy_0.handle_path_1.0_reverse_proxy="{{upstreams 5984}}"'
       #- 'caddy_ingress_network=ukwkwsk'
