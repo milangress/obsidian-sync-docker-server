@@ -22,4 +22,4 @@ services:
       #Secret (?) url haha
       - 'caddy_0.handle_path_1=/e=_/*'
       - 'caddy_0.handle_path_1.reverse_proxy="{{upstreams 5984}}"'
-      #- 'caddy_ingress_network=ukwkwsk'
+      - 'caddy_ingress_network=ukwkwsk'
