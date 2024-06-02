@@ -15,3 +15,4 @@ services:
     restart: unless-stopped
     labels:
       - 'caddy_0=https://obsidian-sync.milan.place'
+      - 'caddy_0.handle_path.0_reverse_proxy={{upstreams 5984}}'
